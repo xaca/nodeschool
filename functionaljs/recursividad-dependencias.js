@@ -8,11 +8,12 @@ function getDependencies(tree) {
       console.log(tree.dependencies)
       if(tree.dependencies)
       {
-        console.log(tree.dependencies.length)
-        if(tree.dependencies.length)
+        let temp = Object.keys(tree.dependencies)
+        console.log(temp.length)
+        if(temp.length)
         {
-          console.log(tree.dependencies.pop())
-          return getDependencies(tree)              
+          console.log(temp.pop())
+          return getDependencies(temp)              
         }      
       }
     }
